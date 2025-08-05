@@ -1,0 +1,30 @@
+# Configuration for Amazon Reviews experiments
+
+# Data settings
+data:
+  path: "data/raw/amazon_reviews.tsv"
+  text_column: "review_body"
+  max_samples: null
+  amazon_reviews: true
+  amazon_sample_size: 100
+
+# Model settings
+model:
+  embedding_type: "openai"
+  openai_model: "text-embedding-ada-002"
+  n_samples: 15
+
+# Evaluation settings
+evaluation:
+  enabled: true
+  coverage_eval: true
+  generate_summaries: true
+  visualize: true
+
+# Output settings
+output:
+  dir: "results/amazon_experiment"
+  
+# Misc settings
+random_seed: 42
+cpu_only: false

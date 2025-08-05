@@ -1,0 +1,31 @@
+# Default configuration for Vec2Summ experiments
+
+# Data settings
+data:
+  path: "data/raw/sample.csv"
+  text_column: "text"
+  max_samples: null
+  amazon_reviews: false
+  amazon_sample_size: 50
+
+# Model settings
+model:
+  embedding_type: "openai"  # openai or gtr
+  openai_model: "text-embedding-ada-002"
+  gtr_model: "sentence-transformers/gtr-t5-base"
+  n_samples: 10
+
+# Evaluation settings
+evaluation:
+  enabled: true
+  coverage_eval: true
+  generate_summaries: true
+  visualize: true
+
+# Output settings
+output:
+  dir: "results"
+  
+# Misc settings
+random_seed: 42
+cpu_only: false
