@@ -18,7 +18,7 @@ import torch
 import vec2text
 from transformers import AutoModel, AutoTokenizer
 
-from .core.embeddings import get_gtr_embeddings, get_openai_embeddings
+from .core.embeddings import get_embeddings, get_embeddings_and_corrector, get_gtr_embeddings, get_openai_embeddings
 from .core.distribution import calculate_distribution_params, sample_from_distribution
 from .core.reconstruction import reconstruct_text_from_embeddings
 from .core.summarization import generate_vec2summ_summary, generate_llm_summary, compare_summaries_geval
@@ -104,19 +104,17 @@ def run_vec2summ_experiment(args):
         logger.error("No texts loaded. Exiting.")
         return
     
-    # Initialize models based on embedding type
-    if args.embedding_type == "openai":
-        # For OpenAI embeddings
-        embeddings = get_openai_embeddings(texts, model=args.openai_model)
-        corrector = vec2text.load_pretrained_corrector(args.openai_model)
-        embedding_model = "openai"
-    else:
-        # For GTR embeddings
-        encoder = AutoModel.from_pretrained(args.gtr_model).encoder.to(device)
-        tokenizer = AutoTokenizer.from_pretrained(args.gtr_model)
-        embeddings = get_gtr_embeddings(texts, encoder, tokenizer, device=device)
-        corrector = vec2text.load_pretrained_corrector("gtr-base")
-        embedding_model = (encoder, tokenizer)
+    # Generate embeddings and get properly paired corrector
+    logger.info(f"Generating embeddings using {args.embedding_type} model")
+    embeddings, corrector, embedding_model = get_embeddings_and_corrector(
+        texts,
+        embedding_type=args.embedding_type,
+        openai_model=args.openai_model,
+        gtr_model=args.gtr_model,
+        device=device
+    )
+    
+    logger.info(f"Loaded properly paired corrector for {args.embedding_type} embeddings")
     
     # Calculate distribution parameters
     mean_vector, covariance_matrix = calculate_distribution_params(embeddings)
@@ -220,10 +218,13 @@ def run_vec2summ_experiment(args):
     # Visualize embeddings
     if args.visualize:
         # Get embeddings for reconstructed texts for visualization
-        if args.embedding_type == "openai":
-            reconstructed_embeddings = get_openai_embeddings(reconstructed_texts, model=args.openai_model)
-        else:
-            reconstructed_embeddings = get_gtr_embeddings(reconstructed_texts, encoder, tokenizer, device=device)
+        reconstructed_embeddings = get_embeddings(
+            reconstructed_texts,
+            embedding_type=args.embedding_type,
+            openai_model=args.openai_model,
+            gtr_model=args.gtr_model,
+            device=device
+        )
         
         visualize_embeddings(
             embeddings, 

@@ -1,0 +1,31 @@
+# Configuration for GTR embeddings experiments
+
+# Data settings
+data:
+  path: "data/raw/sample.csv"
+  text_column: "text"
+  max_samples: null
+  amazon_reviews: false
+  amazon_sample_size: 50
+
+# Model settings
+model:
+  embedding_type: "gtr"  # Use GTR embeddings instead of OpenAI
+  openai_model: "text-embedding-ada-002"  # Not used but kept for compatibility
+  gtr_model: "sentence-transformers/gtr-t5-base"
+  n_samples: 10
+
+# Evaluation settings
+evaluation:
+  enabled: true
+  coverage_eval: true
+  generate_summaries: true
+  visualize: true
+
+# Output settings
+output:
+  dir: "results/gtr_experiment"
+  
+# Misc settings
+random_seed: 42
+cpu_only: false

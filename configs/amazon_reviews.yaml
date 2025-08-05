@@ -10,8 +10,9 @@ data:
 
 # Model settings
 model:
-  embedding_type: "openai"
+  embedding_type: "openai"  # openai or gtr
   openai_model: "text-embedding-ada-002"
+  gtr_model: "sentence-transformers/gtr-t5-base"
   n_samples: 15
 
 # Evaluation settings

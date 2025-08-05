@@ -8,8 +8,6 @@ import re
 import preprocessor as p
 from torch.utils.data import Dataset
 
-# Set preprocessor options
-p.set_options(p.OPT.URL, p.OPT.MENTION, p.OPT.HASHTAG, p.OPT.RESERVED, p.OPT.EMOJI, p.OPT.SMILEY)
 
 
 class TextDataset(Dataset):

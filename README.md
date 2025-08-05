@@ -52,6 +52,45 @@ python scripts/run_experiment.py \
     --output_dir results/experiment_1
 ```
 
+## 🎛️ Embedding Types
+
+Vec2Summ supports two embedding types with different trade-offs:
+
+### OpenAI Embeddings
+- **Models**: `text-embedding-ada-002`, `text-embedding-3-small`, `text-embedding-3-large`
+- ✅ High quality, well-trained embeddings
+- ✅ No local model download required
+- ❌ Requires OpenAI API key and costs money
+- ❌ Internet connection required
+
+### GTR Embeddings (Open Source)
+- **Model**: `sentence-transformers/gtr-t5-base`
+- ✅ Free and runs locally
+- ✅ No API key or internet required (after download)
+- ✅ Full control over the model
+- ❌ Requires more computational resources
+- ❌ Initial model download (~1GB)
+
+### ⚠️ Critical: Embedding-Corrector Pairing
+
+**The vec2text library requires proper pairing between embeddings and correctors:**
+
+- **OpenAI embeddings** → **OpenAI corrector** (same model name)
+- **GTR embeddings** → **GTR corrector** (`gtr-base`)
+
+**Mixing different types will cause errors!** Our code automatically handles this pairing.
+
+```python
+# ✅ Correct - automatically paired
+embeddings, corrector, models = get_embeddings_and_corrector(
+    texts, embedding_type="openai", openai_model="text-embedding-ada-002"
+)
+
+# ❌ Wrong - manual pairing can lead to errors
+embeddings = get_openai_embeddings(texts)
+corrector = vec2text.load_pretrained_corrector("gtr-base")  # WRONG!
+```
+
 ## 📊 Experiment Examples
 
 ### Amazon Reviews Summarization
@@ -82,6 +121,43 @@ python scripts/run_experiment.py \
     --max_samples 1000 \
     --evaluate \
     --output_dir results/gtr_experiment
+```
+
+### Using Configuration Files
+
+For easier experiment management, you can use YAML configuration files:
+
+```bash
+# Run experiment with OpenAI embeddings
+python scripts/run_config_experiment.py configs/default.yaml
+
+# Run experiment with GTR embeddings
+python scripts/run_config_experiment.py configs/gtr_embeddings.yaml
+
+# Run Amazon reviews experiment
+python scripts/run_config_experiment.py configs/amazon_reviews.yaml --openai-api-key YOUR_KEY
+```
+
+Example configuration file (`configs/gtr_embeddings.yaml`):
+```yaml
+data:
+  path: "data/raw/sample.csv"
+  text_column: "text"
+  max_samples: null
+
+model:
+  embedding_type: "gtr"  # Use GTR instead of OpenAI
+  gtr_model: "sentence-transformers/gtr-t5-base"
+  n_samples: 10
+
+evaluation:
+  enabled: true
+  coverage_eval: true
+  generate_summaries: true
+  visualize: true
+
+output:
+  dir: "results/gtr_experiment"
 ```
 
 ## 🏗️ Project Structure
@@ -127,6 +203,25 @@ vec2summ/
 - `--openai_model`: OpenAI embedding model (default: `text-embedding-ada-002`)
 - `--gtr_model`: GTR model (default: `sentence-transformers/gtr-t5-base`)
 - `--n_samples`: Number of vectors to sample from distribution
+
+#### Embedding Type Comparison
+
+**OpenAI Embeddings** (`--embedding_type openai`):
+- ✅ High quality, well-trained embeddings
+- ✅ No local model download required
+- ✅ Consistent performance across domains
+- ❌ Requires OpenAI API key and internet connection
+- ❌ Usage costs apply
+- ❌ No control over model architecture
+
+**GTR Embeddings** (`--embedding_type gtr`):
+- ✅ Free to use (open source)
+- ✅ Runs locally (no internet required after download)
+- ✅ Full control over the model
+- ✅ No usage limits or costs
+- ❌ Requires initial model download (~1GB)
+- ❌ Requires more computational resources
+- ❌ May need fine-tuning for specific domains
 
 ### Evaluation Options
 - `--evaluate`: Enable reconstruction quality evaluation
