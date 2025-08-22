@@ -78,7 +78,6 @@ ehthumbs.db
 Thumbs.db
 
 # Project specific
-data/raw/*
 !data/raw/.gitkeep
 results/
 logs/
