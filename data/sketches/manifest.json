@@ -1,0 +1,149 @@
+[
+ {
+  "dataset": "askdocs",
+  "n": 1000,
+  "seed": 42,
+  "k_fitted": 10,
+  "k_released": 10
+ },
+ {
+  "dataset": "askdocs",
+  "n": 1000,
+  "seed": 43,
+  "k_fitted": 10,
+  "k_released": 10
+ },
+ {
+  "dataset": "askdocs",
+  "n": 1000,
+  "seed": 44,
+  "k_fitted": 10,
+  "k_released": 10
+ },
+ {
+  "dataset": "askdocs_fever",
+  "n": 1000,
+  "seed": 42,
+  "k_fitted": 10,
+  "k_released": 10
+ },
+ {
+  "dataset": "askdocs_fever",
+  "n": 1000,
+  "seed": 43,
+  "k_fitted": 10,
+  "k_released": 10
+ },
+ {
+  "dataset": "askdocs_fever",
+  "n": 1000,
+  "seed": 44,
+  "k_fitted": 10,
+  "k_released": 10
+ },
+ {
+  "dataset": "biden",
+  "n": 1000,
+  "seed": 42,
+  "k_fitted": 10,
+  "k_released": 8
+ },
+ {
+  "dataset": "biden",
+  "n": 1000,
+  "seed": 43,
+  "k_fitted": 10,
+  "k_released": 7
+ },
+ {
+  "dataset": "biden",
+  "n": 1000,
+  "seed": 44,
+  "k_fitted": 10,
+  "k_released": 7
+ },
+ {
+  "dataset": "illegal",
+  "n": 1000,
+  "seed": 42,
+  "k_fitted": 10,
+  "k_released": 8
+ },
+ {
+  "dataset": "illegal",
+  "n": 1000,
+  "seed": 43,
+  "k_fitted": 10,
+  "k_released": 7
+ },
+ {
+  "dataset": "illegal",
+  "n": 1000,
+  "seed": 44,
+  "k_fitted": 10,
+  "k_released": 7
+ },
+ {
+  "dataset": "onebook",
+  "n": 1000,
+  "seed": 42,
+  "k_fitted": 10,
+  "k_released": 3
+ },
+ {
+  "dataset": "onebook",
+  "n": 1000,
+  "seed": 43,
+  "k_fitted": 10,
+  "k_released": 2
+ },
+ {
+  "dataset": "onebook",
+  "n": 1000,
+  "seed": 44,
+  "k_fitted": 10,
+  "k_released": 4
+ },
+ {
+  "dataset": "tifu",
+  "n": 1000,
+  "seed": 42,
+  "k_fitted": 10,
+  "k_released": 10
+ },
+ {
+  "dataset": "tifu",
+  "n": 1000,
+  "seed": 43,
+  "k_fitted": 10,
+  "k_released": 10
+ },
+ {
+  "dataset": "tifu",
+  "n": 1000,
+  "seed": 44,
+  "k_fitted": 10,
+  "k_released": 10
+ },
+ {
+  "dataset": "trump",
+  "n": 1000,
+  "seed": 42,
+  "k_fitted": 10,
+  "k_released": 8
+ },
+ {
+  "dataset": "trump",
+  "n": 1000,
+  "seed": 43,
+  "k_fitted": 10,
+  "k_released": 8
+ },
+ {
+  "dataset": "trump",
+  "n": 1000,
+  "seed": 44,
+  "k_fitted": 10,
+  "k_released": 8
+ }
+]
