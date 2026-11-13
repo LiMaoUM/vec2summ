@@ -1,0 +1,25 @@
+{
+ "dataset": "trump",
+ "judges": [
+  "codex",
+  "sonnet"
+ ],
+ "result": {
+  "codex": {
+   "gap_cov_1k": 1.333,
+   "gap_cov_10k": 1.667,
+   "vec2summ_cov_1k": 3.667,
+   "vec2summ_cov_10k": 2.667,
+   "medoid_cov_1k": 5.0,
+   "medoid_cov_10k": 4.333
+  },
+  "sonnet": {
+   "gap_cov_1k": 0.667,
+   "gap_cov_10k": 0.667,
+   "vec2summ_cov_1k": 3.333,
+   "vec2summ_cov_10k": 3.0,
+   "medoid_cov_1k": 4.0,
+   "medoid_cov_10k": 3.667
+  }
+ }
+}

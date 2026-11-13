@@ -1,0 +1,7 @@
+condition,n_claims,unsupported_rate
+centroid,11.976,0.01
+direct,11.952,0.008
+random,12.0,0.018
+vec2summ,12.0,0.063
+vec2summ_gmm,12.0,0.036
+vec2summ_pca,11.905,0.024

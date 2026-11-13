@@ -1,0 +1,121 @@
+{
+ "codex_means": {
+  "medoid": {
+   "coverage": {
+    "mean": 4.333333333333333,
+    "sd": 0.7302967433402214
+   },
+   "factual_accuracy": {
+    "mean": 4.142857142857143,
+    "sd": 0.7270291799999699
+   },
+   "coherence": {
+    "mean": 4.142857142857143,
+    "sd": 0.35856858280031806
+   },
+   "conciseness": {
+    "mean": 4.095238095238095,
+    "sd": 0.30079260375911915
+   }
+  },
+  "vec2summ_gmm": {
+   "coverage": {
+    "mean": 3.8095238095238093,
+    "sd": 0.8135752957807666
+   },
+   "factual_accuracy": {
+    "mean": 3.8095238095238093,
+    "sd": 1.030487633067356
+   },
+   "coherence": {
+    "mean": 4.0476190476190474,
+    "sd": 0.4976133515281193
+   },
+   "conciseness": {
+    "mean": 4.142857142857143,
+    "sd": 0.47809144373375745
+   }
+  },
+  "centroid": {
+   "coverage": {
+    "mean": 4,
+    "sd": 1.0
+   },
+   "factual_accuracy": {
+    "mean": 4.285714285714286,
+    "sd": 0.7171371656006361
+   },
+   "coherence": {
+    "mean": 4.095238095238095,
+    "sd": 0.4364357804719847
+   },
+   "conciseness": {
+    "mean": 4.238095238095238,
+    "sd": 0.5389584311207967
+   }
+  },
+  "random": {
+   "coverage": {
+    "mean": 4.095238095238095,
+    "sd": 0.7003400534570263
+   },
+   "factual_accuracy": {
+    "mean": 3.8095238095238093,
+    "sd": 0.8135752957807666
+   },
+   "coherence": {
+    "mean": 4.142857142857143,
+    "sd": 0.35856858280031806
+   },
+   "conciseness": {
+    "mean": 4,
+    "sd": 0.4472135954999579
+   }
+  },
+  "direct": {
+   "coverage": {
+    "mean": 4.619047619047619,
+    "sd": 0.4976133515281193
+   },
+   "factual_accuracy": {
+    "mean": 4.285714285714286,
+    "sd": 0.8451542547285166
+   },
+   "coherence": {
+    "mean": 3.857142857142857,
+    "sd": 0.6546536707079771
+   },
+   "conciseness": {
+    "mean": 3.142857142857143,
+    "sd": 1.0623424252901832
+   }
+  }
+ },
+ "medoid_tests": {
+  "medoid_vs_vec2summ_gmm|coverage": {
+   "mean_diff": 0.5238095238095238,
+   "p": 0.01795
+  },
+  "medoid_vs_vec2summ_gmm|factual_accuracy": {
+   "mean_diff": 0.3333333333333333,
+   "p": 0.2213
+  },
+  "medoid_vs_centroid|coverage": {
+   "mean_diff": 0.3333333333333333,
+   "p": 0.1887
+  },
+  "medoid_vs_centroid|factual_accuracy": {
+   "mean_diff": -0.14285714285714285,
+   "p": 0.61635
+  },
+  "medoid_vs_random|coverage": {
+   "mean_diff": 0.23809523809523808,
+   "p": 0.22835
+  },
+  "medoid_vs_random|factual_accuracy": {
+   "mean_diff": 0.3333333333333333,
+   "p": 0.23735
+  }
+ },
+ "n_cells": 21
+}

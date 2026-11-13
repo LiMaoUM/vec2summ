@@ -1,0 +1,95 @@
+{
+ "n_modes": 210,
+ "tau_near_cos": 0.959,
+ "corr_support_jaccard": -0.22,
+ "corr_nearcos_jaccard": 0.462,
+ "corr_support_nearcos": -0.095,
+ "corr_nearcos_jaccard_twitter": 0.662,
+ "corr_nearcos_jaccard_nontwitter": 0.238,
+ "nontwitter_max_jaccard": 0.333,
+ "high_leak_modes_jac_ge_0.4": [
+  {
+   "cell": "biden/44/m3",
+   "jac": 0.769,
+   "support": 36,
+   "near_cos": 0.973
+  },
+  {
+   "cell": "biden/44/m4",
+   "jac": 0.467,
+   "support": 84,
+   "near_cos": 0.961
+  },
+  {
+   "cell": "biden/42/m5",
+   "jac": 0.45,
+   "support": 115,
+   "near_cos": 0.966
+  },
+  {
+   "cell": "illegal/43/m8",
+   "jac": 0.421,
+   "support": 40,
+   "near_cos": 0.968
+  },
+  {
+   "cell": "biden/44/m7",
+   "jac": 0.409,
+   "support": 34,
+   "near_cos": 0.96
+  }
+ ],
+ "nearcos_threshold": {
+  "tau": 0.959,
+  "modes_cut_pct": 20.5,
+  "resid_max_jaccard": 0.368,
+  "jac_ge_0.4_surviving": 0,
+  "probe_cov_all": 0.905,
+  "probe_cov_after": 0.901,
+  "coverage_drop_pct": 0.5,
+  "in_sample_tuned": true
+ },
+ "support_threshold_to_clear_jac0.4": {
+  "tau": 115,
+  "modes_cut_pct": 70
+ },
+ "per_dataset_coverage_all_kept": {
+  "askdocs": [
+   0.8796,
+   0.8796
+  ],
+  "askdocs_fever": [
+   0.8993,
+   0.8993
+  ],
+  "biden": [
+   0.9057,
+   0.8991
+  ],
+  "illegal": [
+   0.9134,
+   0.9099
+  ],
+  "onebook": [
+   0.94,
+   0.9253
+  ],
+  "tifu": [
+   0.8912,
+   0.8912
+  ],
+  "trump": [
+   0.9056,
+   0.9014
+  ]
+ },
+ "per_dataset_pct_modes_cut": {
+  "askdocs": 0,
+  "askdocs_fever": 0,
+  "biden": 27,
+  "illegal": 27,
+  "onebook": 70,
+  "tifu": 0,
+  "trump": 20
+ }
+}

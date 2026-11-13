@@ -1,0 +1,65 @@
+{
+ "datasets": [
+  "askdocs",
+  "trump",
+  "tifu"
+ ],
+ "seeds": [
+  42,
+  43,
+  44
+ ],
+ "n": 10000,
+ "k": 10,
+ "d": 768,
+ "metric": "probe coverage (mean-max cosine), GTR",
+ "per_dataset": {
+  "askdocs": {
+   "batch": [
+    0.5976,
+    0.0013
+   ],
+   "stream": [
+    0.5914,
+    0.0046
+   ],
+   "merge": [
+    0.5881,
+    0.0003
+   ]
+  },
+  "trump": {
+   "batch": [
+    0.6873,
+    0.0008
+   ],
+   "stream": [
+    0.6839,
+    0.0023
+   ],
+   "merge": [
+    0.6848,
+    0.0006
+   ]
+  },
+  "tifu": {
+   "batch": [
+    0.6483,
+    0.0008
+   ],
+   "stream": [
+    0.6451,
+    0.0019
+   ],
+   "merge": [
+    0.6429,
+    0.0029
+   ]
+  }
+ },
+ "memory": {
+  "batch_floats": 7680000,
+  "stream_floats": 407040,
+  "merge_peak_floats": 768000
+ }
+}

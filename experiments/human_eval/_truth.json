@@ -1,0 +1,38 @@
+{
+ "askdocs_42": {
+  "S1": "medoid",
+  "S2": "vec2summ_gmm"
+ },
+ "askdocs_43": {
+  "S1": "vec2summ_gmm",
+  "S2": "medoid"
+ },
+ "askdocs_44": {
+  "S1": "medoid",
+  "S2": "vec2summ_gmm"
+ },
+ "trump_42": {
+  "S1": "vec2summ_gmm",
+  "S2": "medoid"
+ },
+ "trump_43": {
+  "S1": "medoid",
+  "S2": "vec2summ_gmm"
+ },
+ "trump_44": {
+  "S1": "medoid",
+  "S2": "vec2summ_gmm"
+ },
+ "tifu_42": {
+  "S1": "vec2summ_gmm",
+  "S2": "medoid"
+ },
+ "tifu_43": {
+  "S1": "vec2summ_gmm",
+  "S2": "medoid"
+ },
+ "tifu_44": {
+  "S1": "vec2summ_gmm",
+  "S2": "medoid"
+ }
+}

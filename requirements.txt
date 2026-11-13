@@ -1,0 +1,11 @@
+# Versions used for the reported results (Python 3.10)
+numpy==2.2.3
+pandas==2.2.3
+scikit-learn==1.6.1
+scipy==1.15.2
+openai==1.65.1
+torch==2.6.0
+transformers==4.49.0
+sentence-transformers==3.4.1
+vec2text==0.0.13
+matplotlib==3.10.1

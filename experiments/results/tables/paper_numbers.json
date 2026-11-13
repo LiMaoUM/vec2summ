@@ -1,0 +1,136 @@
+{
+ "gauss_T1.2": {
+  "trump": 0.7496713002522787,
+  "biden": 0.7494032979011536,
+  "illegal": 0.7643568515777588,
+  "askdocs_fever": 0.7397544185320536,
+  "askdocs": 0.7082038720448812,
+  "onebook": 0.8107869029045105,
+  "tifu": 0.7310755848884583
+ },
+ "mean_only": {
+  "trump": 0.891468346118927,
+  "biden": 0.8895514408747355,
+  "illegal": 0.9012652635574341,
+  "askdocs_fever": 0.8819617629051208,
+  "askdocs": 0.8590298692385355,
+  "onebook": 0.927773098150889,
+  "tifu": 0.8786743879318237
+ },
+ "pca": {
+  "trump": 0.8995231787363688,
+  "biden": 0.8983823657035828,
+  "illegal": 0.908471425374349,
+  "askdocs_fever": 0.8920531074206034,
+  "askdocs": 0.8713586926460266,
+  "onebook": 0.9356352090835571,
+  "tifu": 0.885920524597168
+ },
+ "gmm": {
+  "trump": 0.90558260679245,
+  "biden": 0.9057352344195048,
+  "illegal": 0.9134364326794943,
+  "askdocs_fever": 0.8992660840352377,
+  "askdocs": 0.879555324713389,
+  "onebook": 0.940037727355957,
+  "tifu": 0.8912199139595032
+ },
+ "_macro": {
+  "gauss_T1.2": 0.7504646040144421,
+  "mean_only": 0.889960595539638,
+  "pca": 0.8987635005088078,
+  "gmm": 0.9049761891365051
+ },
+ "gtr_macro": {
+  "vec2summ": 0.4271308055945805,
+  "centroid": 0.5717490528311048,
+  "random": 0.5232391144548144
+ },
+ "geval": {
+  "vec2summ|gpt-4.1": {
+   "coverage": 2.38,
+   "factual_accuracy": 3.24,
+   "coherence": 4.95,
+   "conciseness": 2.95
+  },
+  "vec2summ|llama-3.3-70b": {
+   "coverage": 1.86,
+   "factual_accuracy": 3.14,
+   "coherence": 4.9,
+   "conciseness": 2.29
+  },
+  "centroid|gpt-4.1": {
+   "coverage": 3.81,
+   "factual_accuracy": 4.81,
+   "coherence": 5.0,
+   "conciseness": 3.19
+  },
+  "centroid|llama-3.3-70b": {
+   "coverage": 3.14,
+   "factual_accuracy": 4.81,
+   "coherence": 5.0,
+   "conciseness": 2.38
+  },
+  "random|gpt-4.1": {
+   "coverage": 3.76,
+   "factual_accuracy": 4.05,
+   "coherence": 5.0,
+   "conciseness": 3.38
+  },
+  "random|llama-3.3-70b": {
+   "coverage": 3.05,
+   "factual_accuracy": 4.24,
+   "coherence": 4.9,
+   "conciseness": 2.52
+  },
+  "direct|gpt-4.1": {
+   "coverage": 5.0,
+   "factual_accuracy": 5.0,
+   "coherence": 5.0,
+   "conciseness": 3.29
+  },
+  "direct|llama-3.3-70b": {
+   "coverage": 3.86,
+   "factual_accuracy": 4.76,
+   "coherence": 4.86,
+   "conciseness": 2.24
+  },
+  "vec2summ_gmm|gpt-4.1": {
+   "coverage": 3.67,
+   "factual_accuracy": 4.71,
+   "coherence": 5.0,
+   "conciseness": 3.05
+  },
+  "vec2summ_gmm|llama-3.3-70b": {
+   "coverage": 3.0,
+   "factual_accuracy": 4.67,
+   "coherence": 4.9,
+   "conciseness": 2.57
+  },
+  "vec2summ_pca|gpt-4.1": {
+   "coverage": 3.38,
+   "factual_accuracy": 4.48,
+   "coherence": 4.95,
+   "conciseness": 3.0
+  },
+  "vec2summ_pca|llama-3.3-70b": {
+   "coverage": 2.62,
+   "factual_accuracy": 3.95,
+   "coherence": 5.0,
+   "conciseness": 2.48
+  }
+ },
+ "fidelity": {
+  "gmm": 0.9371586574585647,
+  "pca": 0.9303518759307581,
+  "gauss_T1.2": 0.7750369410352699
+ },
+ "cost_n1000": {
+  "centroid": 1856.2857142857142,
+  "direct": 148314.0,
+  "hierarchical[gpt-4.1]": 154844.7142857143,
+  "hierarchical[llama-3.3-70b]": 153738.85714285713,
+  "random": 1455.4285714285713,
+  "vec2summ": 776.5714285714286
+ }
+}

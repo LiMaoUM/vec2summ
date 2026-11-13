@@ -1,0 +1,13 @@
+condition,summarizer,coherence,conciseness,coverage,factual_accuracy
+centroid,gpt-4.1,5.0,3.286,4.143,4.881
+centroid,llama-3.3-70b,5.0,2.524,3.31,4.881
+direct,gpt-4.1,5.0,3.381,4.952,5.0
+direct,llama-3.3-70b,4.929,2.405,3.952,4.881
+random,gpt-4.1,5.0,3.333,4.071,4.5
+random,llama-3.3-70b,4.929,2.643,3.262,4.595
+vec2summ,gpt-4.1,4.905,2.976,2.429,3.333
+vec2summ,llama-3.3-70b,4.881,2.333,2.0,3.405
+vec2summ_gmm,gpt-4.1,5.0,3.048,3.667,4.714
+vec2summ_gmm,llama-3.3-70b,4.905,2.571,3.0,4.667
+vec2summ_pca,gpt-4.1,4.952,3.0,3.381,4.476
+vec2summ_pca,llama-3.3-70b,5.0,2.476,2.619,3.952

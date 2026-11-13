@@ -1,0 +1,244 @@
+{
+ "codex": {
+  "means": {
+   "medoid": {
+    "coverage": {
+     "mean": 4.333333333333333,
+     "sd": 0.7302967433402214
+    },
+    "factual_accuracy": {
+     "mean": 4.142857142857143,
+     "sd": 0.7270291799999699
+    },
+    "coherence": {
+     "mean": 4.142857142857143,
+     "sd": 0.35856858280031806
+    },
+    "conciseness": {
+     "mean": 4.095238095238095,
+     "sd": 0.30079260375911915
+    }
+   },
+   "vec2summ_gmm": {
+    "coverage": {
+     "mean": 3.8095238095238093,
+     "sd": 0.8135752957807666
+    },
+    "factual_accuracy": {
+     "mean": 3.8095238095238093,
+     "sd": 1.030487633067356
+    },
+    "coherence": {
+     "mean": 4.0476190476190474,
+     "sd": 0.4976133515281193
+    },
+    "conciseness": {
+     "mean": 4.142857142857143,
+     "sd": 0.47809144373375745
+    }
+   },
+   "centroid": {
+    "coverage": {
+     "mean": 4,
+     "sd": 1.0
+    },
+    "factual_accuracy": {
+     "mean": 4.285714285714286,
+     "sd": 0.7171371656006361
+    },
+    "coherence": {
+     "mean": 4.095238095238095,
+     "sd": 0.4364357804719847
+    },
+    "conciseness": {
+     "mean": 4.238095238095238,
+     "sd": 0.5389584311207967
+    }
+   },
+   "random": {
+    "coverage": {
+     "mean": 4.095238095238095,
+     "sd": 0.7003400534570263
+    },
+    "factual_accuracy": {
+     "mean": 3.8095238095238093,
+     "sd": 0.8135752957807666
+    },
+    "coherence": {
+     "mean": 4.142857142857143,
+     "sd": 0.35856858280031806
+    },
+    "conciseness": {
+     "mean": 4,
+     "sd": 0.4472135954999579
+    }
+   },
+   "direct": {
+    "coverage": {
+     "mean": 4.619047619047619,
+     "sd": 0.4976133515281193
+    },
+    "factual_accuracy": {
+     "mean": 4.285714285714286,
+     "sd": 0.8451542547285166
+    },
+    "coherence": {
+     "mean": 3.857142857142857,
+     "sd": 0.6546536707079771
+    },
+    "conciseness": {
+     "mean": 3.142857142857143,
+     "sd": 1.0623424252901832
+    }
+   }
+  },
+  "tests": {
+   "medoid_vs_vec2summ_gmm|coverage": {
+    "mean_diff": 0.5238095238095238,
+    "p": 0.016
+   },
+   "medoid_vs_vec2summ_gmm|factual_accuracy": {
+    "mean_diff": 0.3333333333333333,
+    "p": 0.21805
+   },
+   "medoid_vs_centroid|coverage": {
+    "mean_diff": 0.3333333333333333,
+    "p": 0.1944
+   },
+   "medoid_vs_centroid|factual_accuracy": {
+    "mean_diff": -0.14285714285714285,
+    "p": 0.6186
+   },
+   "medoid_vs_random|coverage": {
+    "mean_diff": 0.23809523809523808,
+    "p": 0.2259
+   },
+   "medoid_vs_random|factual_accuracy": {
+    "mean_diff": 0.3333333333333333,
+    "p": 0.23565
+   }
+  },
+  "n": 21
+ },
+ "sonnet": {
+  "means": {
+   "medoid": {
+    "coverage": {
+     "mean": 2.9047619047619047,
+     "sd": 0.6248809410409238
+    },
+    "factual_accuracy": {
+     "mean": 3.1904761904761907,
+     "sd": 0.6796357567879738
+    },
+    "coherence": {
+     "mean": 4.142857142857143,
+     "sd": 0.5732115042211109
+    },
+    "conciseness": {
+     "mean": 3.4761904761904763,
+     "sd": 0.6015852075182383
+    }
+   },
+   "vec2summ_gmm": {
+    "coverage": {
+     "mean": 2.619047619047619,
+     "sd": 0.7400128699009549
+    },
+    "factual_accuracy": {
+     "mean": 2.9047619047619047,
+     "sd": 1.13599128098599
+    },
+    "coherence": {
+     "mean": 3.8095238095238093,
+     "sd": 0.6015852075182383
+    },
+    "conciseness": {
+     "mean": 3.238095238095238,
+     "sd": 0.5389584311207967
+    }
+   },
+   "centroid": {
+    "coverage": {
+     "mean": 2.761904761904762,
+     "sd": 0.7003400534570263
+    },
+    "factual_accuracy": {
+     "mean": 3.3333333333333335,
+     "sd": 0.9660917830792959
+    },
+    "coherence": {
+     "mean": 3.9523809523809526,
+     "sd": 0.7400128699009549
+    },
+    "conciseness": {
+     "mean": 3.7142857142857144,
+     "sd": 0.6436503043467892
+    }
+   },
+   "random": {
+    "coverage": {
+     "mean": 2.9047619047619047,
+     "sd": 0.7003400534570263
+    },
+    "factual_accuracy": {
+     "mean": 2.8095238095238093,
+     "sd": 1.0779168622415933
+    },
+    "coherence": {
+     "mean": 3.8095238095238093,
+     "sd": 0.6015852075182383
+    },
+    "conciseness": {
+     "mean": 3.380952380952381,
+     "sd": 0.5895922723535711
+    }
+   },
+   "direct": {
+    "coverage": {
+     "mean": 3.9047619047619047,
+     "sd": 0.9436504599035548
+    },
+    "factual_accuracy": {
+     "mean": 3.4761904761904763,
+     "sd": 0.9283882603225667
+    },
+    "coherence": {
+     "mean": 3.857142857142857,
+     "sd": 0.6546536707079771
+    },
+    "conciseness": {
+     "mean": 2.619047619047619,
+     "sd": 0.8646496675642961
+    }
+   }
+  },
+  "tests": {
+   "medoid_vs_vec2summ_gmm|coverage": {
+    "mean_diff": 0.2857142857142857,
+    "p": 0.1443
+   },
+   "medoid_vs_vec2summ_gmm|factual_accuracy": {
+    "mean_diff": 0.2857142857142857,
+    "p": 0.29175
+   },
+   "medoid_vs_centroid|coverage": {
+    "mean_diff": 0.14285714285714285,
+    "p": 0.6476
+   },
+   "medoid_vs_centroid|factual_accuracy": {
+    "mean_diff": -0.14285714285714285,
+    "p": 0.71155
+   },
+   "medoid_vs_random|coverage": {
+    "mean_diff": 0,
+    "p": 1.0
+   },
+   "medoid_vs_random|factual_accuracy": {
+    "mean_diff": 0.38095238095238093,
+    "p": 0.21055
+   }
+  },
+  "n": 21
+ }
+}

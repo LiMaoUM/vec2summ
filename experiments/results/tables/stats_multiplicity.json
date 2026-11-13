@@ -1,0 +1,100 @@
+{
+ "method": "Holm-Bonferroni step-down within each test family; paired d_z = mean(diff)/sd(diff) with 10k-sample percentile bootstrap 95% CI over the 21 dataset x seed cells.",
+ "recon_finding1": {
+  "family_size": 4,
+  "p_raw": {
+   "gmm_vs_random": 0.0,
+   "gmm_vs_centroid": 0.0147,
+   "gmm_vs_gauss": 0.0,
+   "pca_vs_random": 0.0
+  },
+  "p_holm": {
+   "gmm_vs_random": 0.0,
+   "gmm_vs_gauss": 0.0,
+   "pca_vs_random": 0.0,
+   "gmm_vs_centroid": 0.0147
+  },
+  "effect": {
+   "gmm_vs_random": {
+    "d_z": 2.54,
+    "ci95": [
+     1.99,
+     3.75
+    ]
+   },
+   "gmm_vs_centroid": {
+    "d_z": 0.61,
+    "ci95": [
+     0.14,
+     1.65
+    ]
+   },
+   "gmm_vs_gauss": {
+    "d_z": 5.14,
+    "ci95": [
+     3.89,
+     8.51
+    ]
+   },
+   "pca_vs_random": {
+    "d_z": 1.66,
+    "ci95": [
+     1.2,
+     2.54
+    ]
+   }
+  }
+ },
+ "gpt41_quality": {
+  "family_size": 8,
+  "p_raw": {
+   "gmm_vs_random|coverage": 0.8236,
+   "gmm_vs_random|factual_accuracy": 0.0309,
+   "gmm_vs_random|coherence": 1.0,
+   "gmm_vs_random|conciseness": 0.0924,
+   "gmm_vs_centroid|coverage": 0.6529,
+   "gmm_vs_centroid|factual_accuracy": 0.6857,
+   "gmm_vs_centroid|coherence": 1.0,
+   "gmm_vs_centroid|conciseness": 0.639
+  },
+  "p_holm": {
+   "gmm_vs_random|factual_accuracy": 0.2476,
+   "gmm_vs_random|conciseness": 0.6464,
+   "gmm_vs_centroid|conciseness": 1.0,
+   "gmm_vs_centroid|coverage": 1.0,
+   "gmm_vs_centroid|factual_accuracy": 1.0,
+   "gmm_vs_random|coverage": 1.0,
+   "gmm_vs_random|coherence": 1.0,
+   "gmm_vs_centroid|coherence": 1.0
+  },
+  "effect_pivotal": {
+   "gmm_vs_random|factual_accuracy": {
+    "d_z": 0.58,
+    "ci95": [
+     0.32,
+     0.88
+    ]
+   }
+  }
+ },
+ "medoid_coverage_finding2": {
+  "codex": {
+   "mean_diff": 0.524,
+   "p_raw": 0.0147,
+   "d_z": 0.64,
+   "ci95": [
+    0.28,
+    1.09
+   ]
+  },
+  "sonnet": {
+   "mean_diff": 0.286,
+   "p_raw": 0.1507,
+   "d_z": 0.4,
+   "ci95": [
+    0.0,
+    1.02
+   ]
+  }
+ }
+}
